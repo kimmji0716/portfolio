@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반려동물</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    .must::before{
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #FF9839;
+      margin-right: 6px;
+    }
+    .pet_info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+    }
+    .pet_img{
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(0 0 0 /0.3);
+      position: relative;
+      background: url(../img/profile_img.jpg) no-repeat center;
+      background-size: cover;
+    }
+    .pet_img::after{
+      content: url(../img/btn_cam.png);
+      cursor: pointer;
+      position: absolute;
+      left: 62px;
+      top: 62px;
+    }
+    .pet_info p{
+      position: absolute;
+      left: 261px;
+      top: 112px;
+      font-size: 0.75rem;
+      color: #959595;
+      display: flex;
+      align-items: center;
+    }
+
+    .setting_wrap{
+      color: #595959;
+      padding: 0 20px;
+    }
+    .setting_wrap h3{
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+    .setting_wrap input[type="text"],.medical_menu{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      font-family: 'Noto Sans KR', sans-serif;
+      outline: 0;
+      border: 0;
+      border-bottom: 1px solid #D9D9D9;
+      color: #595959;
+      font-size: 0.875rem;
+    }
+    .setting_wrap input[type="text"]::placeholder{color: #959595;}
+    .setting_wrap input[type="radio"]:nth-child(2)
+    ,.setting_wrap input[type="radio"]:nth-child(3){margin-bottom: 20px;}
+    .setting_wrap label{
+      padding-left: 6px;
+      color: #232323;
+    }
+    .setting_box{margin-bottom: 16px;}
+    .medical_menu{
+      display: flex;
+      color: #959595;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .medical_list{
+      margin-top: 16px;
+      height: 210px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      display: none;
+    }
+    .medical_list li{
+      padding: 6px 10px;
+      border-radius: 50px;
+      border: 1px solid #D9D9D9;
+      color: #595959;
+      font-size: 0.875rem;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .medical_list li:hover,.medical_list li.on{
+      background-color: #46D3FF;
+      border: 1px solid #46D3FF;
+      color: #fff;
+    }
+
+    .btn_done{
+      width: 100%;
+      line-height: 52px;
+      border-radius: 10px;
+      background-color: #46D3FF;
+      font-size: 1.25rem;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="mypet.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>반려동물</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <div class="pet_info">
+        <div class="pet_img"></div>
+        <p class="must">필수 선택사항</p>
+      </div>
+
+      <section class="setting_wrap">
+        <div class="setting_box">
+          <h3 class="must">반려동물 이름</h3>
+          <input type="text" value="마루" placeholder="반려동물의 이름을 입력해주세요.">
+        </div>
+        <div class="setting_box">
+          <h3 class="must">종</h3>
+          <input type="radio" name="kind" id="dog" checked><label for="dog">강아지</label>
+          <input type="radio" name="kind" id="cat"><label for="cat">고양이</label>
+          <input type="radio" name="kind" id="etc_kind"><label for="etc_kind">기타(직접입력)</label>
+        </div>
+        <div class="setting_box">
+          <h3 class="must">성별</h3>
+          <input type="radio" name="sex" id="male"><label for="male">남아</label>
+          <input type="radio" name="sex" id="male_neuter"><label for="male_neuter">남아(중성화)</label><br>
+          <input type="radio" name="sex" id="female"><label for="female">여아</label>
+          <input type="radio" name="sex" id="female_neuter"><label for="female_neuter">여아(중성화)</label>
+          <input type="radio" name="sex" id="dontknow"><label for="dontknow">모름</label>
+        </div>
+        <div class="setting_box">
+          <h3>생년월일</h3>
+          <input type="text" placeholder="YYYY - MM - DD">
+        </div>
+        <div class="setting_box">
+          <h3>동물 등록 번호</h3>
+          <input type="text" placeholder="동물 등록 번호를 입력해주세요.">
+        </div>
+        <div class="setting_box">
+          <h3>걱정되는 질병</h3>
+          <div class="medical_menu">
+            <p>최대 3개까지 선택 가능</p>
+            <img src="../img/btn_arrowdown_grey.png" alt="">
+          </div>
+          <ul class="medical_list">
+            <li>퇴행성 관절염</li>
+            <li>슬개골 탈구</li>
+            <li>기관지염</li>
+            <li>비만</li>
+            <li>세균성/식이성 설사</li>
+            <li>외이염(급성)</li>
+            <li>유루증</li>
+            <li>치은염/치주염</li>
+            <li>피부사상균증</li>
+            <li>방광염</li>
+            <li>소양증</li>
+            <li>외이염(만성)</li>
+            <li>피부염(아토피성)</li>
+            <li>피부질환</li>
+          </ul>
+        </div>
+        <div class="btn_done">수정</div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

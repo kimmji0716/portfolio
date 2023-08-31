@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>즐겨찾기</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_mypage.css">
+  <style>
+    .favor_option{
+      padding: 4px 8px;
+      width: 75px;
+      margin: 10px 0 10px 245px;
+      font-size: 0.75rem;
+      color: #959595;
+      border: 1px solid;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="mypage.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>즐겨찾기</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <section class="myfavorite">
+        <div class="favor_option">
+          <p>가까운 순</p>
+          <img src="../img/btn_downarrow.png" alt="">
+        </div>
+        <a href="../tab_hospital/hospital_detail.html" class="favor_hospital">
+          <div class="hospital_img"></div>
+          <div class="hospital_detail">
+            <h3 class="open">이끌림동물병원</h3>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.3<b>(후기 10개)</b></span>
+            </div>
+            <p>1.35km 근방</p>
+            <span>#일요일진료</span>
+            <span>#주차가능</span>
+          </div>
+          <img src="../img/btn_fullheart.png" alt="" style="cursor: pointer;">
+        </a>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

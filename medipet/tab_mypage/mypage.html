@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이페이지</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_mypage.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <h2>마이페이지</h2>
+      <a href="../extrapage/search.html"><img src="../img/btn_search.png" alt="검색"></a>
+      <a href="../extrapage/alert.html"><img src="../img/btn_alert.png" alt="알림"></a>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <!-- 사용자계정 -->
+      <div class="user_info">
+        <div class="user_img"></div>
+        <h2>홍길동</h2>
+        <a href="myinfo.html"><img src="../img/btn_setting.png" alt=""></a>
+      </div>
+      <!-- //사용자계정 -->
+
+      <!-- 서비스버튼 -->
+      <div class="user_service">
+        <a href="#" class="user_review">
+          <img src="../img/icon_review.png" alt="">
+          나의 후기
+        </a>
+        <a href="#" class="user_counsel">
+          <img src="../img/icon_counsel.png" alt="">
+          문의내역
+        </a>
+      </div>
+      <!-- //서비스버튼 -->
+
+      <!-- 예약 -->
+      <section class="reservation">
+        <div class="sec_tit">
+          <img src="../img/icon_date.png" alt="">
+          <h3>예약내역</h3>
+        </div>
+        <a href="reservation.html" class="reserve_list">
+          <h4>이끌림동물병원</h4>
+          <p>7월 6일 (목) 오후 13시 30분</p>
+          <img src="../img/btn_arrow_grey.png" alt="">
+        </a>
+      </section>
+      <!-- //예약 -->
+
+      <!-- 반려동물 -->
+      <section class="mypet">
+        <div class="sec_tit">
+          <img src="../img/icon_mypet.png" alt="">
+          <h3>반려동물</h3>
+        </div>
+        <a href="mypet.html" class="mypet_list">
+          <div class="mypet_img"></div>
+          <div class="mypet_detail">
+            <h4>마루</h4>
+            <p>강아지(푸들) / 여아</p>
+          </div>
+          <img src="../img/btn_arrow_grey.png" alt="">
+        </a>
+      </section>
+      <!-- //반려동물 -->
+
+      <!-- 즐겨찾기 -->
+      <section class="myfavorite">
+        <div class="sec_tit">
+          <img src="../img/icon_heart.png" alt="">
+          <h3>즐겨찾기</h3>
+          <a href="favorite.html">더보기<img src="../img/btn_arrow_grey.png" alt=""></a>
+        </div>
+        <a href="../tab_hospital/hospital_detail.html" class="favor_hospital">
+          <div class="hospital_img"></div>
+          <div class="hospital_detail">
+            <h3 class="open">이끌림동물병원</h3>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.3<b>(후기 10개)</b></span>
+            </div>
+            <p>1.35km 근방</p>
+            <span>#일요일진료</span>
+            <span>#주차가능</span>
+          </div>
+          <img src="../img/btn_fullheart.png" alt="" style="cursor: pointer;">
+        </a>
+      </section>
+      <!-- //즐겨찾기 -->
+
+      <!-- 알림설정 -->
+      <section class="alert_setting">
+        <div class="sec_tit">
+          <img src="../img/icon_alert.png" alt="">
+          <h3>알림설정</h3>
+        </div>
+        <article class="alert_list">
+          <div class="toggle">
+            <span>예약 완료</span>
+            <input role="switch" type="checkbox">
+          </div>
+          <div class="toggle">
+            <span>커뮤니티 활동</span>
+            <input role="switch" type="checkbox">
+          </div>
+          <div class="toggle">
+            <span>문의 답변</span>
+            <input role="switch" type="checkbox">
+          </div>
+        </article>
+      </section>
+      <!-- //알림설정 -->
+
+      <div class="logout">
+        <img src="../img/icon_power.png" alt="">
+        <h3>로그아웃</h3>
+      </div>
+
+    </div>
+
+    <!-- 하단탭 -->
+    <footer class="navi_tap">
+      <ul>
+        <li><a href="../index.html"><img src="../img/tab_home.png" alt=""></a></li>
+        <li><a href="../tab_cost/medicalcost.html"><img src="../img/tab_cost.png" alt=""></a></li>
+        <li><a href="../tab_hospital/hospital.html"><img src="../img/tab_hospital.png" alt=""></a></li>
+        <li><a href="../tab_community/community.html"><img src="../img/tab_community.png" alt=""></a></li>
+        <li><a href="#none"><img src="../img/tab_mypage_on.png" alt=""></a></li>
+      </ul>
+    </footer>
+    <!-- //하단탭 -->
+  </div>
+</body>
+</html>

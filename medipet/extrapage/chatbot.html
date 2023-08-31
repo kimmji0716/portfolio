@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메디펫챗봇</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    /* 챗봇페이지 */
+    .chatbot_wrap{
+      padding: 10px 20px;
+      font-size: 0.75rem;
+    }
+    .chatbot_init{
+      text-align: center;
+      margin: 0 auto 48px;
+    }
+    .chatbot_init > span{
+      font-size: 0.625rem;
+      padding: 3px 10px;
+      border-radius: 10px;
+      background-color: #ECECEC;
+    }
+    .chatbot_message{
+      display: flex;
+      align-items: start;
+    }
+    .chatbot_img{
+      width: 42px;
+      height: 42px;
+      background: url(../img/icon_chatbot.png) no-repeat center;
+      background-size: cover;
+      margin-right: 16px;
+    }
+    .chatbot_text > p{
+      width: 220px;
+      padding: 10px;
+      border-radius: 0 10px 10px 10px;
+      background-color: #F2F2F2;
+      margin-bottom: 10px;
+    }
+    .init_text{width: 168px !important;}
+    .btn_init{
+      width: 250px;
+      font-size: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .btn_init li{
+      padding: 6px 10px;
+      border-radius: 20px;
+      border: 1px solid #959595;
+      color: #959595;
+      cursor: pointer;
+      margin: 0 12px 10px 0;
+    }
+    .btn_init li:hover{
+      background-color: #46D3FF;
+      color: #fff;
+      border: 1px solid #46D3FF;
+    }
+    .btn_goto{
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background-color: #46D3FF;
+      color: #fff;
+    }
+    .btn_goto > img{margin-top: 1px;}
+    .user_message{text-align: end;padding: 20px 0;}
+    .user_message > span{
+      display: inline-block;
+      padding: 10px;
+      background-color: #F2F2F2;
+      border-radius: 10px 0 10px 10px;
+    }
+    .time{
+      color: #A9A9A9;
+      padding-top: 10px;
+    }
+    /* //챗봇페이지 */
+
+    /* 텍스트바 */
+    .text_bar{
+      position: fixed;
+      top: 810px;
+      width: 360px;
+      height: 50px;
+      background-color: #E7E7E7;
+      display: flex;
+    }
+    .text_bar > input{
+      width: 310px;
+      height: 50px;
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      padding-right: 10px;
+      text-indent: 30px;
+      font-size: 12px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .text_bar > button{
+      width: 50px;
+      height: 50px;
+      outline: 0;
+      border: 0;
+      background-color: #959595;
+      cursor: pointer;
+    }
+    /* //텍스트바 */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="../index.html"><img src="../img/btn_close.png" alt=""></a>
+      <h2>메디펫봇</h2>
+    </header>
+    <!-- //상단탭 -->
+    <div class="container">
+      <!-- 챗봇대화창 -->
+      <section class="chatbot_wrap">
+        <div class="chatbot_init"><span>2023.07.24(월)</span></div>
+        <div class="chatbot_message">
+          <div class="chatbot_img"></div>
+          <div class="chatbot_text">
+            <p class="init_text">안녕하세요, 메디펫봇입니다.<br>무엇을 도와드릴까요?</p>
+            <ul class="btn_init">
+              <li>진료비 비교</li>
+              <li>예약방법</li>
+              <li>1:1 문의</li>
+              <li>병원후기</li>
+              <li>증상문의</li>
+            </ul>
+            <div class="time">15:11</div>
+          </div>
+        </div>
+        <div class="user_message">
+          <span>진료비 비교</span>
+          <div class="time">15:12</div>
+        </div>
+        <div class="chatbot_message response">
+          <div class="chatbot_img"></div>
+          <div class="chatbot_text">
+            <p>진료비 비교는 메디펫에서 진료비DB를 이용하여 진료항목별로 평균 진료비를 비교해볼 수 있는 서비스 입니다.</p>
+            <a href="../tab_cost/medicalcost.html" class="btn_goto">진료비 비교하러 가기<img src="../img/btn_arrow.png" alt=""></a>
+            <div class="time">15:12</div>
+          </div>
+        </div>
+      </section>
+      <!-- //챗봇대화창 -->
+      
+    </div>
+    
+    <!-- 텍스트바 -->
+    <footer class="text_bar">
+      <input type="text" placeholder="궁금한 사항을 입력해 주세요.">
+      <button type="submit"><img src="../img/btn_send.png" alt=""></button>
+    </footer>
+    <!-- //텍스트바 -->
+  </div>
+  <script>
+    $(function(){
+      
+    });
+  </script>
+</body>
+</html>

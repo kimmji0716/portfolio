@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반려동물</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    .pet_info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 6px solid #F0F0F0;
+      position: relative;
+    }
+    .pet_img{
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(0 0 0 /0.3);
+      margin-bottom: 10px;
+      position: relative;
+      background: url(../img/profile_img.jpg) no-repeat center;
+      background-size: cover;
+    }
+    .pet_img::after{
+      content: url(../img/btn_cam.png);
+      cursor: pointer;
+      position: absolute;
+      left: 62px;
+      top: 62px;
+    }
+    .pet_info h2{position: relative;font-size: 0.875rem;}
+    .pet_info a{
+      content: url(../img/btn_setting.png);
+      width: 20px;
+      height: 20px;
+      cursor:pointer;
+      position:absolute;
+      left: 197px;
+      top: 122px;
+    }
+
+    .pet_detail{padding: 10px 20px 0;}
+    .pet_detail h3{
+      font-size: 1.125rem;
+      margin-bottom: 10px;
+    }
+    .pet_information{
+      display: flex;
+      font-size: 0.875rem;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .pet_information h4{
+      padding-left: 5px;
+      padding-right: 10px;
+      color: #595959;
+    }
+    .pet_information p{
+      font-weight: 500;
+      color: #232323;
+    }
+    
+    .detail_medical{
+      border-top: 1px solid #D9D9D9;
+      padding-top: 20px;
+    }
+    .detail_medical p{
+      color: #595959;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="mypet_list.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>반려동물</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <div class="pet_info">
+        <div class="pet_img"></div>
+        <h2>마루</h2>
+        <a href="mypet_setting.html"><img src="../img/btn_setting.png" alt=""></a>
+      </div>
+
+      <section class="pet_detail">
+        <div class="detail_info">
+          <h3>반려동물 정보</h3>
+          <div class="pet_information">
+            <img src="../img/icon_female.png" alt="">
+            <h4>성별</h4>
+            <p>여아</p>
+          </div>
+          <div class="pet_information">
+            <img src="../img/icon_mypet.png" alt="">
+            <h4>종</h4>
+            <p>강아지</p>
+          </div>
+          <div class="pet_information">
+            <img src="../img/icon_birthday.png" alt="">
+            <h4>생일</h4>
+          </div>
+          <div class="pet_information">
+            <img src="../img/icon_list.png" alt="">
+            <h4>동물 등록 번호</h4>
+          </div>
+          <div class="pet_information">
+            <img src="../img/icon_medical.png" alt="">
+            <h4>걱정되는 질병</h4>
+          </div>
+        </div>
+        <div class="detail_medical">
+          <h3>진료기록</h3>
+          <p>아직 진료를 받은 기록이 없네요!</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+  </script>
+</body>
+</html>

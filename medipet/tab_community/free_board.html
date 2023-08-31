@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자유게시판</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .free_wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px 20px;
+    }
+    .free_con{
+      width: 155px;
+      margin-bottom: 10px;
+    }
+    .free_con p{
+      font-size: 0.625rem;
+      color: #959595;
+    }
+    .free_con > h3{
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #595959;
+    }
+    .free_img{
+      width: 155px;
+      height: 155px;
+      border-radius: 4px;
+      background: url(../img/free_img01.jpg) no-repeat center;
+      background-size: cover;
+    }
+    .free02{background: url(../img/free_img02.jpg) no-repeat center;background-size: cover;}
+    .free03{background: url(../img/free_img03.jpg) no-repeat center;background-size: cover;}
+    .free04{background: url(../img/free_img04.jpg) no-repeat center;background-size: cover;}
+    .free05{background: url(../img/free_img05.jpg) no-repeat center;background-size: cover;}
+    .free06{background: url(../img/free_img06.jpg) no-repeat center;background-size: cover;}
+    .free07{background: url(../img/free_img07.jpg) no-repeat center;background-size: cover;}
+    .free08{background: url(../img/free_img08.jpg) no-repeat center;background-size: cover;}
+
+    .flt_btn_write{
+      position: absolute;
+      left: 290px;
+      top: 719px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 0.875rem;
+      box-shadow: 4px 4px 4px rgba(0 0 0 /0.1);
+      background-color: #46D3FF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" style="background-color: #F2F2F2;">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="community.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>자유게시판</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <article class="free_wrap">
+        <a href="free_board_detail.html" class="free_con">
+          <div class="free_img"></div>
+          <h3>강아지 자유배식해도 괜찮을까요...</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free02"></div>
+          <h3>요즘 산책 어디서 하나요?</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free03"></div>
+          <h3>고양이 캣타워 어디서 사세요?</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free04"></div>
+          <h3>푸바오 보고왔어요ㅎㅎ</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free05"></div>
+          <h3>아이가 이상한거 주워먹으면 어떻게하나요?</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free06"></div>
+          <h3>귀여운 우리 고양이 보고가세요..</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free07"></div>
+          <h3>길고양이 냥줍했어요.</h3>
+          <p>조회수 159</p>
+        </a>
+        <a href="#" class="free_con">
+          <div class="free_img free08"></div>
+          <h3>애기 사진 찍었는데 어떤가용ㅎㅎ</h3>
+          <p>조회수 159</p>
+        </a>
+      </article>
+    </div>
+    <a href="free_board_write.html" class="flt_btn_write">글쓰기</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이끌림동물병원|후기</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .container{padding: 0;}
+    .btn_backpage{
+      position: absolute;
+      left: 10px;
+      top: 35px;
+      z-index: 9;
+    }
+
+    .hospital_visual{position: relative;}
+    .hospital_img{
+      width: 100%;
+      height: 263px;
+      background: url(../img/hospital01.jpg) no-repeat center;
+      background-size: cover;
+    }
+    .white_bg{
+      height: 102px;
+      background-color: #fff;
+      border-bottom: 8px solid #F2F2F2;
+    }
+    .hospital_tit{
+      width: 320px;
+      padding: 20px 0;
+      position: absolute;
+      left: 20px;
+      top: 192px;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1px solid #ECECEC;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hospital_tit h2{
+      font-size: 1.25rem;
+      font-weight: 500;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .hospital_tit h2::after{
+      content: "진료중";
+      font-size: 0.75rem;
+      color: #959595;
+      position: absolute;
+      right: -40px;
+      top: 5px;
+    }
+    .star_score{
+      display: flex;
+      align-items: center;
+      font-size: 0.757rem;
+      margin-bottom: 30px;
+    }
+    .star_score p{padding: 0 4px 0 5px;}
+    .star_score span{
+      color: #8F8F8F;
+    }
+    .btn_set_wrap,.btn_favor,.btn_share{display: flex;align-items: center;}
+    .btn_set_wrap img{margin-right: 4px;}
+    .section_bar{
+      width: 1px;
+      height: 14px;
+      background-color: #D9D9D9;
+    }
+    .btn_favor{padding-right: 40px;cursor: pointer;}
+    .btn_share{padding-left: 40px;cursor: pointer;}
+
+    .btn_page{
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #D9D9D9;
+      display: flex;
+      margin-bottom: 16px;
+    }
+    .btn_page a{
+      display: flex;
+      width: 50%;
+      color: #787878;
+      justify-content: center;
+    }
+    .btn_page a div{
+      width: 60px;
+      line-height: 50px;
+    }
+    .btn_page a div.on{
+      font-weight: 500;
+      color: #000;
+      border-bottom: 3px solid #595959;
+    }
+    .review_wrap{padding: 0 20px 32px;}
+    .review_box{
+      padding: 14px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 1px solid #F2F2F2;
+    }
+    .top_line{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+    .hashtag{color: #FF9839;font-weight: 500;}
+    .hashtag span{padding-right: 10px;}
+    .box_star_score{
+      display: flex;
+      align-items: center;
+    }
+    .box_star_score img{margin-right: 4px;}
+    .review_box > span{font-size: 0.75rem;color: #595959;}
+    .review_box > p{
+      font-size: 0.875rem;
+      color: #232323;
+      margin: 8px 0 12px;
+    }
+    .bottom_line{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      font-size: 0.625rem;
+    }
+    .keypoint{display: flex;}
+    .keypoint p{
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 1px solid #D9D9D9;
+      margin-right: 4px;
+    }
+    .date{color: #595959;}
+    .btn_more{
+      width: 320px;
+      line-height: 52px;
+      margin-top: 6px;
+      color: #595959;
+      background-color: #F2F2F2;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .flt_btn_write{
+      position: absolute;
+      left: 290px;
+      top: 719px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 0.875rem;
+      box-shadow: 4px 4px 4px rgba(0 0 0 /0.1);
+      background-color: #46D3FF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container">
+      <a href="hospital.html" class="btn_backpage"><img src="../img/btn_back_bg.png" alt=""></a>
+      <!-- 병원비주얼 -->
+      <div class="hospital_visual">
+        <div class="hospital_img"></div>
+        <div class="white_bg"></div>
+        <div class="hospital_tit">
+          <h2>이끌림동물병원</h2>
+          <div class="star_score">
+            <img src="../img/icon_star.png" alt="">
+            <p>4.3</p>
+            <span>(후기 10개)</span>
+          </div>
+          <div class="btn_set_wrap">
+            <div class="btn_favor">
+              <img src="../img/btn_heart.png">
+              <p>즐겨찾기</p>
+            </div>
+            <div class="section_bar"></div>
+            <div class="btn_share">
+              <img src="../img/icon_share.png">
+              <p>공유</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //병원비주얼 -->
+
+      <!-- 내용 -->
+      <div class="btn_page">
+        <a href="hospital_detail.html"><div>병원정보</div></a>
+        <a href="#"><div class="on">리뷰(10)</div></a>
+      </div>
+      <div class="review_wrap">
+        <div class="review_box">
+          <div class="top_line">
+            <div class="hashtag">
+              <span>#알러지</span><span>#피부</span>
+            </div>
+            <div class="box_star_score">
+              <img src="../img/icon_star.png" alt="">
+              <p>4.5</p>
+            </div>
+          </div>
+          <span>215,000원</span>
+          <p>
+            친절하게 해주셨고 과잉진료도 없었어요. 매번 방문해요.
+          </p>
+          <div class="bottom_line">
+            <div class="keypoint">
+              <p>친절해요</p>
+              <p>과잉진료 없어요</p>
+            </div>
+            <div class="date">2023.07.24</div>
+          </div>
+        </div>
+        <div class="review_box">
+          <div class="top_line">
+            <div class="hashtag">
+              <span>#피부</span>
+            </div>
+            <div class="box_star_score">
+              <img src="../img/icon_star.png" alt="">
+              <p>4.5</p>
+            </div>
+          </div>
+          <span>325,000원</span>
+          <p>
+            동물병원 중에 여기만한 병원이 없는 것 같아요~ 친절하시고 설명도 잘해주시고 과잉진료 없으십니다. 진료 볼 때 다른 데는 같이 못 들어가는데 여긴 같이 들어가서 볼 수도 있고 하니까 애들도 덜 불안해 하는 것 같고 무엇보다 진료 치료 진짜 잘해주십니다! 믿고 맡길 수 있는 병원 강추입니다~
+          </p>
+          <div class="bottom_line">
+            <div class="keypoint">
+              <p>친절해요</p>
+              <p>꼼꼼해요</p>
+            </div>
+            <div class="date">2023.07.23</div>
+          </div>
+        </div>
+        <div class="review_box">
+          <div class="top_line">
+            <div class="hashtag">
+              <span>#피부</span>
+            </div>
+            <div class="box_star_score">
+              <img src="../img/icon_star.png" alt="">
+              <p>4.5</p>
+            </div>
+          </div>
+          <span>325,000원</span>
+          <p>
+            원장님 두 분 다 친절하시고 간호사 선생님들도 친절하세요. 6년 째 다니는 병원이에요 ㅎㅎ
+          </p>
+          <div class="bottom_line">
+            <div class="keypoint">
+              <p>친절해요</p>
+              <p>과잉진료 없어요</p>
+            </div>
+            <div class="date">2023.07.23</div>
+          </div>
+        </div>
+        <div class="btn_more">리뷰 더보기</div>
+      </div>
+      <!-- //내용 -->
+    </div>
+    <a href="hospital_review_write.html" class="flt_btn_write">리뷰<br>쓰기</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예약하기</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    .box{
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #F2F2F2;
+    }
+
+    .calender_wrap{padding: 30px 20px 16px;}
+    .calender{
+      padding: 20px 16px 16px;
+      color: #4D4D4D;
+      text-align: center;}
+    .calender h3{
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+    }
+    .calender h3::before{
+      content: url(../img/btn_calender_back.png);
+      margin-right: 12px;
+      cursor: pointer;
+    }
+    .calender h3::after{
+      content: url(../img/btn_calender_next.png);
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    th{font-weight: 500;}
+    th,td{width: 40px;line-height: 40px;}
+    td{cursor: pointer;border-radius: 50%;}
+    td.on{background-color: #46D3FF;color: #fff;}
+    td:not(.off):hover{background-color: #F2F2F2;}
+    td.off{color: #CCCCCC;cursor: default;}
+
+    .time_wrap{padding: 0 20px;}
+    .time{padding: 20px;}
+    .time h3{
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #4D4D4D;
+      margin-bottom: 8px;
+    }
+    .time_table{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      justify-content: space-between;
+    }
+    .time_pm{margin-bottom: 27px;}
+    .time_table li{
+      width: 64px;
+      line-height: 35px;
+      text-align: center;
+      border-radius: 4px;
+      background-color: #E8F9FF;
+      margin-bottom: 8px;
+      color: #232323;
+      cursor: pointer;
+    }
+    .time_table li.on{background-color: #46D3FF;color: #fff;}
+    .time_table li.off{background-color: #F2F2F2;color: #595959;cursor: default;}
+    .possible_time{
+      display: flex;
+      justify-content: end;
+      font-size: 0.625rem;
+    }
+    .possible_time p{display: flex;align-items: center;margin-left: 12px;}
+    .possible_time p::before{
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: #E8F9FF;
+      margin-right: 4px;
+    }
+    .possible_time p:last-child::before{background-color: #F2F2F2;}
+
+    .information_wrap{padding: 16px 20px;}
+    .information{padding: 20px;}
+    .information h3{
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+    .information a{color: #595959;display: flex;align-items: center;}
+    .information a img{margin-left: 4px;}
+    .pet_info,.user_info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pet_info{margin-bottom: 10px;}
+
+    .medical_wrap{padding: 0 20px;}
+    .medical{
+      padding: 20px 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .medical h3{
+      width: 100%;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .btn_radio{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 50%;
+      cursor: pointer;
+    }
+    .btn_radio img{
+      background-color: #ECECEC;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .btn_radio.on img{background-color: #46D3FF;}
+
+    .memo_wrap{padding: 16px 20px 52px;}
+    .memo{padding: 20px;}
+    .memo h3{font-size: 1.125rem;font-weight: 500;margin-bottom: 8px;}
+    .memo textarea{
+      width: 100%;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #959595;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      resize: none;
+    }
+    .btn_reserve{
+      width: 320px;
+      line-height: 52px;
+      margin: 0 20px;
+      font-size: 1.25rem;
+      color: #959595;
+      border: 1px solid;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .overlay_shadow{
+      position: absolute;
+      left: 0;top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 9;
+      display: none;
+    }
+    .overlay_layer{
+      position: absolute;
+      bottom: -264px;
+      width: 100%;
+      padding: 24px 32px 20px;
+      background-color: #fff;
+      border-radius: 28px 28px 0 0;
+      text-align: center;
+      z-index: 10;
+      transition: 0.5s;
+    }
+    .overlay_layer h4{font-weight: 500;margin-bottom: 30px;}
+    .pet_name{font-size: 0.875rem;margin-bottom: 4px;}
+    .overlay_layer h3{font-weight: 500;font-size: 1.5rem;margin-bottom: 10px;}
+    .reserve_time{font-weight: 500;font-size: 1.25rme;margin-bottom: 33px;color: #00C2FF;}
+    .btn_wrap{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: #232323;
+    }
+    .btn_wrap a{
+      display: block;
+      width: 142px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #D9D9D9;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="hospital_detail.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>예약하기</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <!-- 달력 -->
+      <div class="calender_wrap">
+        <div class="calender box">
+          <h3>2023.07</h3>
+          <table>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+
+            <tr>
+              <td class="off"></td>
+              <td class="off"></td>
+              <td class="off"></td>
+              <td class="off"></td>
+              <td class="off"></td>
+              <td class="off"></td>
+              <td class="off">1</td>
+            </tr>
+            <tr>
+              <td class="off">2</td>
+              <td class="off">3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>31</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- //달력 -->
+
+      <!-- 시간 -->
+      <div class="time_wrap">
+        <div class="time box">
+          <h3>AM</h3>
+          <ul class="time_table">
+            <li class="off">09:30</li>
+            <li>10:30</li>
+            <li>11:00</li>
+            <li class="off">11:30</li>
+          </ul>
+          <h3>PM</h3>
+          <ul class="time_table time_pm">
+            <li class="off">12:00</li>
+            <li>12:30</li>
+            <li class="off">13:00</li>
+            <li>13:30</li>
+            <li>14:00</li>
+            <li class="off">14:30</li>
+            <li>15:00</li>
+            <li class="off">16:30</li>
+            <li>17:00</li>
+            <li>17:30</li>
+            <li class="off">18:00</li>
+            <li>18:30</li>
+            <li class="off">19:00</li>
+            <li class="off">19:30</li>
+            <li>20:00</li>
+            <li class="off">21:30</li>
+          </ul>
+          <div class="possible_time">
+            <p>선택 가능</p>
+            <p>선택 불가능</p>
+          </div>
+        </div>
+      </div>
+      <!-- //시간 -->
+
+      <div class="information_wrap">
+        <div class="information box">
+          <div class="pet_info">
+            <h3>반려동물</h3>
+            <a href="../tab_mypage/mypet.html">마루<img src="../img/btn_arrow_grey.png" alt=""></a>
+          </div>
+          <div class="user_info">
+            <h3>보호자정보</h3>
+            <a href="../tab_mypage/myinfo.html">홍길동님<img src="../img/btn_arrow_grey.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="medical_wrap">
+        <div class="medical box">
+          <h3>진료유형</h3>
+          <div class="btn_radio">
+            <img src="../img/icon_check.png" alt="">
+            <p>일반진료</p>
+          </div>
+          <div class="btn_radio">
+            <img src="../img/icon_check.png" alt="">
+            <p>예방접종</p>
+          </div>
+          <div class="btn_radio">
+            <img src="../img/icon_check.png" alt="">
+            <p>건강검진</p>
+          </div>
+          <div class="btn_radio">
+            <img src="../img/icon_check.png" alt="">
+            <p>수술상담</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="memo_wrap">
+        <div class="memo box">
+          <h3>메모</h3>
+          <textarea placeholder="우리 반려동물에 대해 의사선생님이 알아주셨으면 하는 점이 있다면 작성해주세요."></textarea>
+        </div>
+      </div>
+
+      <div class="btn_reserve">예약하기</div>
+    </div>
+    <div class="overlay_shadow"></div>
+    <div class="overlay_layer">
+      <h4>예약 확정</h4>
+      <p class="pet_name">푸들 / 3세 / 여아</p>
+      <h3>마루 일반진료</h3>
+      <p class="reserve_time">7월 6일 (목) 오후 1:30</p>
+      <div class="btn_wrap">
+        <a href="../tab_mypage/reservation.html">예약내역</a>
+        <a href="../index.html">홈으로 이동</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $('td').not('.off').click(function(){
+        $('td').removeClass('on');
+        $(this).addClass('on');
+      });
+      $('.time_table li').click(function(){
+        $('.time_table li').removeClass('on');
+        $(this).addClass('on');
+      });
+      $('.btn_radio').click(function(){
+        $('.btn_radio').removeClass('on');
+        $(this).addClass('on');
+      });
+
+      $('.btn_reserve').click(function(){
+        $('.overlay_shadow').fadeIn();
+        $('.overlay_layer').css('bottom',0);
+      });
+    });
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반려동물</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    .mypet_list{
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      margin: 20px;
+      border-radius: 10px;
+      border: 1px solid #D9D9D9;
+    }
+    .pet_img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: url(../img/profile_img.jpg) no-repeat center;
+      background-size: cover;
+      margin-right: 10px;
+    }
+    .pet_name{flex-grow: 1;}
+    .pet_name h3{
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .pet_name p{
+      font-size: 0.75rem;
+      padding: 10px 0;
+    }
+    .flt_btn_register{
+      position: absolute;
+      left: 290px;
+      top: 730px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 11px;
+      box-shadow: 4px 4px 4px rgba(0 0 0 /0.1);
+      background-color: #46D3FF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="mypage.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>반려동물</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <a href="mypet.html" class="mypet_list">
+        <div class="pet_img"></div>
+        <div class="pet_name">
+          <h3>마루</h3>
+          <p>강아지(푸들) / 여아</p>
+        </div>
+        <img src="../img/btn_arrow_grey.png" alt="">
+      </a>
+    </div>
+    <a href="#" class="flt_btn_register"><img src="../img/icon_plus_white.png" alt=""></a>
+  </div>
+</body>
+</html>

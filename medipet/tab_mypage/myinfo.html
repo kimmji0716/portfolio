@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내정보</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_mypage.css">
+  <style>
+    .user_info{border-bottom: 0;}
+    .user_img{margin-bottom: 0;}
+
+    .user_info_content{padding: 0 20px;}
+    .info_box h3{
+      color: #595959;
+      padding: 10px 0;
+    }
+    .info_box input{
+      width: 100%;
+      padding: 10px 0;
+      color: #959595;
+      outline: 0;
+      border: 0;
+      border-bottom: 1px solid #D9D9D9;
+      font-size: 0.875rem;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="mypage.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>내정보</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <!-- 사용자계정 -->
+      <div class="user_info">
+        <div class="user_img"></div>
+      </div>
+      <!-- //사용자계정 -->
+      <div class="user_info_content">
+        <div class="info_box">
+          <h3>이름</h3>
+          <input type="text" value="홍길동" placeholder="이름을 입력해주세요.">
+        </div>
+        <div class="info_box">
+          <h3>전화번호</h3>
+          <input type="tel" value="010-1234-5678" placeholder="전화번호를 입력해주세요.">
+        </div>
+        <div class="info_box">
+          <h3>이메일</h3>
+          <input type="email" value="a12345678@naver.com" placeholder="이메일을 입력해주세요.">
+        </div>
+        <div class="info_box">
+          <h3>거주지</h3>
+          <input type="text" value="대구광역시 동구 용계동 1018-1 영진직업전문학교" placeholder="주소를 입력해주세요.">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

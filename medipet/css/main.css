@@ -1,0 +1,229 @@
+/* 상단탭바 */
+.top_tapbar{
+  border-bottom: 1px solid #ECECEC;
+  background-color: #fff;
+}
+.top_tapbar > h1{flex-grow: 1;}
+
+/* 내계정 */
+.main_account{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  font-size: 1.125rem;
+}
+.account_text{padding: 20px;}
+.main_account h2{
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  color: #797979;
+}
+.account_text p:nth-child(2){
+  margin: 2px 0 4px ;
+  font-size: 1.25rem;
+}
+.profile_img{
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  margin: 20px;
+  background: url(../img/profile_img.jpg) no-repeat center;
+  background-size: cover;
+}
+.profile_img::after{
+  content: url(../img/btn_plus_skyblue.png);
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 45px 0 0 45px;
+  cursor: pointer;
+}
+/* //내계정 */
+
+/* 주변병원 */
+.main_around{
+  position: relative;
+  margin-top: 6px;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.main_around > h2{
+  padding: 0 20px 16px 20px;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.main_around > h2::after{
+  content: "대구광역시 동구 화랑로 525...";
+  color: #8B8B8B;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-left: 6px;
+}
+
+.swiper-wrapper{
+  width: 1200px;
+  display: flex;
+}
+.main_around .swiper-slide{
+  width: 265px;
+  padding: 14px;
+  margin-left: 20px;
+  border: 1px solid #ECECEC;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: #747474;
+}
+.main_around .swiper-slide h3{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 8px;
+}
+.main_around .swiper-slide h3.open::after{
+  content: "진료중";
+  padding: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #959595;
+}
+.main_around .swiper-slide h3.close::after{
+  content: "휴무";
+  padding: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #959595;
+}
+.main_around .swiper-slide > p:nth-child(2){
+  margin-bottom: 2px;
+}
+.main_around .hashtag_wrap{
+  padding-top: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FF9839;
+}
+/* //주변병원 */
+
+/* 병원후기 */
+.main_review{
+  margin-top: 6px;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.main_review > h2{
+  padding: 20px;
+  padding-bottom: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.main_review > h2::after{
+  content: "가까운 순으로 병원당 하나씩 표시됩니다";
+  color: #8B8B8B;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-left: 6px;
+}
+.main_review .swiper-slide{
+  width: 265px;
+  padding: 14px 12px;
+  margin-left: 20px;
+  border: 1px solid #ECECEC;
+  border-radius: 10px;
+  font-size: 0.875rem;
+}
+.detail_top{
+  display: flex;
+  justify-content: space-between;
+}
+.main_review .swiper-slide h3{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.star_score{
+  font-size: 0.75rem;
+  display: flex;
+  align-items: end;
+}
+.main_review .swiper-slide p{padding: 8px 0 20px;font-size: 0.75rem;}
+.detail_under{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #858585;
+}
+.main_review .hashtag_wrap{
+  font-weight: 500;
+  color: #FF9839;
+}
+/* //병원후기 */
+
+/* 펫케어팁 */
+.main_tip{padding:20px;background-color: #fff;margin: 6px 0;}
+.tip_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.tip_header > h2{
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.tip_header > a{
+  font-size: 0.75rem;
+  color: #858585;
+}
+.main_tip_wrap{
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main_tip_con{
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+}
+.main_tip_con p{
+  padding-left: 4px;
+  font-size: 0.75rem;
+  color: #757575;
+}
+.main_tip_con > h3{
+  padding-left: 4px;
+  font-size: 0.875rem;
+}
+.tip_img{
+  width: 155px;
+  height: 155px;
+  border-radius: 10px;
+  background: url(../img/tip_img01.jpg) no-repeat center;
+  background-size: cover;
+}
+.tip02{background: url(../img/tip_img02.jpg) no-repeat center;background-size: cover;}
+.tip03{background: url(../img/tip_img03.jpg) no-repeat center;background-size: cover;}
+.tip04{background: url(../img/tip_img04.jpg) no-repeat center;background-size: cover;}
+/* //펫케어팁 */
+
+/* 챗봇버튼 */
+.flt_btn_chatbot{
+  position: absolute;
+  left: 290px;
+  top: 672px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 11px;
+  box-shadow: 4px 4px 4px rgba(0 0 0 /0.1);
+  background-color: #46D3FF;
+  color: #fff;
+}
+.flt_btn_chatbot img{margin-bottom: 1px;}

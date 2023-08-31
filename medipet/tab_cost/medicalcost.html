@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>진료비조회</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_cost.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+    .overlay_shadow{
+      position: absolute;
+      left: 0;top: 0;
+      width: 100%; height: 100%;
+      z-index: 9;
+      background-color: rgba(0,0,0,0.6);
+      display: none;
+    }
+    .overlay_layer{
+      position: absolute;
+      bottom: -392px;
+      z-index: 10;
+      width: 100%;
+      height: 392px;
+      padding: 30px 20px;
+      background-color: #fff;
+      border-radius: 28px 28px 0 0 ;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .overlay_layer h3{font-weight: 500;margin-bottom: 16px;}
+    .overlay_layer .text_bar{
+      position: relative;
+    }
+    .overlay_layer .text_bar input{
+      width: 100%;
+      font-size: 0.875rem;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #232323;
+      outline: 0;
+      border: 1px solid #E7E7E7;
+      border-radius: 8px;
+      padding: 10px 40px;
+      box-sizing: border-box;
+    }
+    .overlay_layer .text_bar::before{
+      content: url(../img/btn_search_grey.png);
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      z-index: 99;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar" style="padding-left: 20px;">
+      <h2>진료비조회</h2>
+      <a href="#"><img src="../img/btn_search.png" alt="검색"></a>
+      <a href="#"><img src="../img/btn_alert.png" alt="알림"></a>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <h2>알아보고 싶은 지역을 선택해주세요.</h2>
+      <p>설정해주신 선호지역과 현재 위치를 기반으로 가까운 병원을 추천해드려요.</p>
+
+      <section class="add_location">
+        <div class="loca_tit">
+          <h3>선호 지역</h3>
+          <span>(최대 3개)</span>
+        </div>
+        <div class="btn_locadd">
+          지역 추가
+          <img src="../img/icon_plus.png" alt="">
+        </div>
+      </section>
+      <section class="map">
+        <div class="map_tit">
+          <h3>현재 위치</h3>
+          <p>현재 위치로 설정<img src="../img/icon_target.png" alt=""></p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12931.667936251508!2d128.6814907!3d35.8755512!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35660a44d8eeafc5%3A0x416389a3a017b0c0!2z7JiB7KeE7KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1690270531328!5m2!1sko!2skr" allowfullscreen=""referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      <a href="cost_select.html" class="btn_link">다음</a>
+    </div>
+
+    <!-- 하단탭 -->
+    <footer class="navi_tap">
+      <ul>
+        <li><a href="../index.html"><img src="../img/tab_home.png" alt=""></a></li>
+        <li><a href="#none"><img src="../img/tab_cost_on.png" alt=""></a></li>
+        <li><a href="../tab_hospital/hospital.html"><img src="../img/tab_hospital.png" alt=""></a></li>
+        <li><a href="../tab_community/community.html"><img src="../img/tab_community.png" alt=""></a></li>
+        <li><a href="../tab_mypage/mypage.html"><img src="../img/tab_mypage.png" alt=""></a></li>
+      </ul>
+    </footer>
+    <!-- //하단탭 -->
+
+    <div class="overlay_shadow"></div>
+    <div class="overlay_layer">
+      <h3>지역 검색</h3>
+      <div class="text_bar">
+        <input type="text" placeholder="지역과 동을 입력해주세요">
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $('.btn_locadd').click(function(){
+        $('.overlay_shadow').fadeIn();
+        $('.overlay_layer').css('bottom',0);
+      });
+      $('.overlay_shadow').click(function(){
+        $('.overlay_shadow').fadeOut();
+        $('.overlay_layer').css('bottom','-392px');
+      });
+    });
+  </script>
+</body>
+</html>

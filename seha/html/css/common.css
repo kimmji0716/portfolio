@@ -1,0 +1,57 @@
+/* 공통 */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  padding: 27px 0;
+}
+.header h1 {
+  float: left;
+}
+.container .gnb {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.title-wrap .eng-title {
+  color: #8a8a8a;
+  font-size: 20px;
+}
+.title-wrap h3 {
+  color: #000;
+  font-size: 42px;
+  font-weight: 500;
+}
+.title-wrap .line {
+  width: 72px;
+  height: 2px;
+  background-color: #000;
+  margin: 20px auto 100px;
+}
+
+.container .gnb > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .gnb > ul > li {
+  margin-right: 60px;
+}
+.container .gnb > ul > li:last-child {
+  margin-right: 0;
+}
+.gnb .depth1 > a {
+  display: block;
+  padding: 10px;
+}
+.gnb .depth2 {
+  text-align: center;
+  display: none;
+}
+.section {
+  width: 100%;
+  text-align: center;
+  padding: 100px 0 200px;
+}

@@ -1,0 +1,90 @@
+/* 배너 */
+.banner-img {
+  width: 100%;
+  height: 900px;
+  background-image: url(../img/Rectangle\ 14.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner::after {
+  position: relative;
+}
+.banner h2, .banner p {
+  position: absolute;
+  top: 0;
+  margin-top: 300px;
+  margin-left: 100px;
+  color: #fff;
+}
+.banner h2 {
+  font-size: 96px;
+}
+.banner p {
+  margin-top: 450px;
+  font-size: 24px;
+}
+
+/* 상품 */
+.product-wrap {
+  display: flex;
+}
+.product {
+  background-color: rgba(134, 103, 79, 0.1);
+  margin-right: 32px;
+  padding: 40px 20px 36px;
+}
+.product:last-child {
+  margin-right: 0;
+}
+.product span {
+  display: inline-block;
+  margin: 32px 0 5px;
+  color: #8f8f8f;
+  font-size: 16px;
+}
+.product div {
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+
+/* recruit */
+.rec-section {
+  background-image: url(../img/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rec-section .title-wrap span {
+  color: #fff;
+}
+.rec-section .title-wrap h3 {
+  color: #fff;
+}
+.rec-section .title-wrap .line {
+  background-color: #fff;
+}
+.rec-section .rec-list-wrap {
+  display: flex;
+}
+.rec-list-wrap .rec-list {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin-right: 125px;
+}
+.rec-list img {
+  padding: 93px 117px 20px;
+}
+.rec-list span {
+  display: block;
+  color: #fff;
+  padding-bottom: 92px; 
+}
+
+.rec-list-wrap .rec-list:last-child {
+  margin-right: 0;
+}
+
+.rec-list span {
+  font-size: 26px;
+}

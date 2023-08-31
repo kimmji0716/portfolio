@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDIPET_메디펫</title>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/slide.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <h1><a href="index.html"><img src="img/logo.png" alt="메디펫"></a></h1>
+      <a href="extrapage/search.html"><img src="img/btn_search_black.png" alt="검색"></a>
+      <a href="extrapage/alert.html"><img src="img/btn_alert_black.png" alt="알림"></a>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container" style="background-color: #F2F2F2;">
+      <!-- 내계정 -->
+      <section class="main_account">
+        <div class="account_text">
+          <h2>welcome! 메디펫</h2>
+          <p>홍길동님,</p>
+          <p>
+            반려동물을 등록하고<br>
+            다양한 메디펫 서비스를<br>
+            이용해보세요!
+          </p>
+        </div>
+        <a href="tab_mypage/mypet_list.html" class="profile_img"></a>
+      </section>
+      <!-- //내계정 -->
+
+      <!-- 주변병원 -->
+      <section class="main_around">
+        <h2><a href="tab_hospital/hospital.html">주변병원</a></h2>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="tab_hospital/hospital_detail.html">
+                <h3 class="open">이끌림동물병원</h3>
+                <p>대구 동구 화랑로 429</p>
+                <p>2.73km 근방</p>
+                <div class="hashtag_wrap">
+                  <span>#일요일진료</span>
+                  <span>#주차가능</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="close">율하동물병원</h3>
+                    <p>대구 동구 율하서로 54 101~102호</p>
+                    <p>3.87km 근방</p>
+                    <div class="hashtag_wrap">
+                      <span>#주차가능</span>
+                    </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="open">쿨펫동물병원</h3>
+                    <p>대구 동구 안심로 80 롯데쇼핑프라자</p>
+                    <p>4.71km 근방</p>
+                    <div class="hashtag_wrap">
+                    </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="open">킴스동물병원</h3>
+                    <p>대구 동구 화랑로 413</p>
+                    <p>5.21km 근방</p>
+                    <div class="hashtag_wrap">
+                      <span>#주차가능</span>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //주변병원 -->
+
+      <!-- 병원후기 -->
+      <section class="main_review">
+        <h2><a href="tab_community/review_detail.html">병원후기</a></h2>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="detail_top">
+                <h3>이끌림동물병원</h3>
+                <div class="star_score">
+                  <img src="img/icon_star.png" alt="">
+                  4.5
+                </div>
+              </div>
+              <p>친절하게 해주셨고 과잉진료도 없었어요. 매번 방문해요.</p>
+              <div class="detail_under">
+                <div class="hashtag_wrap">
+                  <span>#알러지</span>
+                  <span>#피부</span>
+                </div>
+                <a href="tab_hospital/hospital_detail.html">더보기</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="detail_top">
+                <h3>율하동물병원</h3>
+                <div class="star_score">
+                  <img src="img/icon_star.png" alt="">
+                  4.5
+                </div>
+              </div>
+              <p>근처에 있는 다른 동물병원도 데려갔었는데 여기는 수의사 분이 되게 친절하신 점이 좋았습니다.</p>
+              <div class="detail_under">
+                <div class="hashtag_wrap">
+                  <span>#피부</span>
+                </div>
+                <a href="#">더보기</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="detail_top">
+                <h3>쿨펫동물병원</h3>
+                <div class="star_score">
+                  <img src="img/icon_star.png" alt="">
+                  4.5
+                </div>
+              </div>
+              <p>여긴 의사선생님들 너무 좋아요.. 과잉진료 없이 꼼꼼히 봐주시고 최고입니다.</p>
+              <div class="detail_under">
+                <div class="hashtag_wrap">
+                  <span>#눈</span>
+                </div>
+                <a href="#">더보기</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="detail_top">
+                <h3>킴스동물병원</h3>
+                <div class="star_score">
+                  <img src="img/icon_star.png" alt="">
+                  4.5
+                </div>
+              </div>
+              <p>다른곳에 가면 대충대충 해주는 곳도 있는데 여기는 하나하나 다 설명해주셔서 너무 좋았어요.</p>
+              <div class="detail_under">
+                <div class="hashtag_wrap">
+                  <span>#슬개골</span>
+                </div>
+                <a href="#">더보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //병원후기 -->
+
+      <!-- 펫케어팁 -->
+      <section class="main_tip">
+        <div class="tip_header">
+          <h2>펫케어팁</h2>
+          <a href="tab_community/petcaretip.html">더보기</a>
+        </div>
+        <article class="main_tip_wrap">
+          <a href="tab_community/petcaretip_detail.html" class="main_tip_con">
+            <div class="tip_img"></div>
+            <p>영양</p>
+            <h3>강아지 빈혈 증상과 빈혈에 좋은 음식!</h3>
+          </a>
+          <a href="#" class="main_tip_con">
+            <div class="tip_img tip02"></div>
+            <p>질병</p>
+            <h3>고양이에게 냄새가 난다면?</h3>
+          </a>
+          <a href="#" class="main_tip_con">
+            <div class="tip_img tip03"></div>
+            <p>건강</p>
+            <h3>강아지가 흙을 먹는 이유!</h3>
+          </a>
+          <a href="#" class="main_tip_con">
+            <div class="tip_img tip04"></div>
+            <p>건강</p>
+            <h3>신장이 안 좋은 고양이가 지켜야 할 것</h3>
+          </a>
+        </article>
+      </section>
+      <!-- //펫케어팁 -->
+    </div>
+
+    <!-- 하단탭 -->
+    <footer class="navi_tap">
+      <ul>
+        <li><a href="#none"><img src="img/tab_home_on.png" alt=""></a></li>
+        <li><a href="tab_cost/medicalcost.html"><img src="img/tab_cost.png" alt=""></a></li>
+        <li><a href="tab_hospital/hospital.html"><img src="img/tab_hospital.png" alt=""></a></li>
+        <li><a href="tab_community/community.html"><img src="img/tab_community.png" alt=""></a></li>
+        <li><a href="tab_mypage/mypage.html"><img src="img/tab_mypage.png" alt=""></a></li>
+      </ul>
+    </footer>
+    <!-- //하단탭 -->
+
+    <!-- 챗봇버튼 -->
+    <a href="extrapage/chatbot.html" class="flt_btn_chatbot"><img src="img/icon_fltchatbot.png" alt="">메디펫봇</a>
+    <!-- //챗봇버튼 -->
+  </div>
+</body>
+</html>

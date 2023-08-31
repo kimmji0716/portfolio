@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자유게시판|상세</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .contents_wrap{padding: 30px 20px 0;}
+    .user_box{display: flex;}
+    .user_img{
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: url(../img/icon_user.png) no-repeat center;
+      background-size: cover;
+      box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    }
+    .user_name{margin-left: 10px;}
+    .user_name h3{font-size: 0.875rem;}
+    .user_name p{
+      font-size: 0.75rem;
+      color: #959595;
+    }
+    .contents_wrap > h3{font-weight: 500;}
+    .contents_wrap > p{
+      font-size: 0.875rem;
+      padding: 8px 0 14px;
+    }
+    .view{
+      font-size: 0.75rem;
+      color: #959595;
+      display: flex;
+      align-items: center;
+    }
+    .view span{padding-left: 4px;}
+    .section_bar{
+      width: 320px;
+      height: 1px;
+      background-color: #ECECEC;
+      margin-top: 20px;
+    }
+
+    .comment_wrap{padding: 14px 20px 0;}
+    .comment_wrap > h3{font-weight: 0.875rem;margin-bottom: 30px;}
+    .user_comment{
+      margin: 5px 0 34px 56px;
+      font-size: 0.875rem;
+    }
+
+    .reply_wrap{
+      width: 100%;
+      height: 56px;
+      border-top: 1px solid #D9D9D9;
+      padding: 10px 20px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+    }
+    .reply_wrap input{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.875rem;
+      color: #232323;
+      flex-grow: 1;
+      padding: 0 10px;
+      background-color: #F2F2F2;
+      outline: 0;
+      border: 0;
+      border-radius: 10px;
+    }
+    .btn_send{
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #959595;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .btn_send img{width: 16px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="community.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>자유게시판</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <div class="contents_wrap">
+        <div class="user_box">
+          <div class="user_img"></div>
+          <div class="user_name">
+            <h3>바니바니</h3>
+            <p>16시간 전</p>
+          </div>
+        </div>
+        <h3>강아지 자율배식해도 괜찮을까요...</h3>
+        <p>
+          요즘 도통 시간이 없어서 정해진 시간마다 밥 주는 게 어려울 것 같아서 ㅠㅠ 이리저리 찾아 보고 있는데 불안하네요.. 다른 분들은 강아지 배식 어떻게 하시나요??
+        </p>
+        <div class="view">
+          <img src="../img/icon_eye.png" alt="">
+          <span>159명이 봤어요</span>
+        </div>
+        <div class="section_bar"></div>
+      </div>
+      
+      <div class="comment_wrap">
+        <h3>댓글 2</h3>
+        <div class="comment_box">
+          <div class="user_box">
+            <div class="user_img"></div>
+            <div class="user_name">
+              <h3>바니바니</h3>
+              <p>16시간 전</p>
+            </div>
+          </div>
+          <div class="user_comment">
+            자율배식하면 강아지들이 스스로 조절한다고 알고있어요~ 똑똑한 애들은 알아서 잘 먹는다고 하더라구요 ㅋ
+          </div>
+        </div>
+        <div class="comment_box">
+          <div class="user_box">
+            <div class="user_img"></div>
+            <div class="user_name">
+              <h3>미야옹</h3>
+              <p>14시간 전</p>
+            </div>
+          </div>
+          <div class="user_comment">
+            저는 자율배식하다 애기가 공복토 하길래 그 때부터는 절대 안해요ㅠㅠ 잘 생각해보셔야 할 듯 해요.
+          </div>
+        </div>
+      </div>
+
+      <div class="reply_wrap">
+        <input type="text" placeholder="댓글을 입력해주세요.">
+        <div class="btn_send">
+          <img src="../img/btn_send.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

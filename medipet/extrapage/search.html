@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통합검색</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .text_bar{
+      position: relative;
+    }
+    .text_bar input{
+      width: 280px;
+      font-size: 0.875rem;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #232323;
+      outline: 0;
+      border: 1px solid #E7E7E7;
+      border-radius: 8px;
+      padding: 10px 40px;
+      box-sizing: border-box;
+    }
+    .text_bar::before{
+      content: url(../img/btn_search_grey.png);
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      z-index: 99;
+      cursor: pointer;
+    }
+    .text_bar::after{
+      content: url(../img/btn_close_grey.png);
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      z-index: 99;
+      cursor: pointer;
+      display: none;
+    }
+    .container{padding-left: 20px;padding-right: 20px;}
+    h2{
+      font-weight: 500;
+      color: #232323;
+      margin-bottom: 12px;
+    }
+    .resent_research{
+      margin-top: 20px;
+      margin-bottom: 38px;
+    }
+    .resent_research p{
+      font-size: 0.75rem;
+      color: #959595;
+    }
+    .hospital_keyword{margin-bottom: 30px;}
+    .keyword_list{
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: #595959;
+    }
+    .keyword_list li{
+      padding: 6px 10px;
+      border-radius: 16px;
+      border:1px solid #D9D9D9;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    .keyword_list li:hover{
+      border:1px solid #00C2FF;
+      background-color: #00C2FF;
+      color: #fff;
+    }
+
+    .result_list{
+      display: flex;
+      align-items: start;
+      background-color: #fff;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      border: 1px solid #ECECEC;
+      margin-bottom: 10px;
+    }
+    .hospital_img{
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      background: url(../img/hospital01.jpg) no-repeat center;
+      background-size: cover;
+      margin-right: 10px;
+    }
+    .hospital_detail{
+      flex-grow: 1;
+    }
+    .hospital_detail h3{
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .hospital_detail h3.open::after{
+      content: "진료중";
+      font-size: 0.75rem;
+      color: #676767;
+      padding-left: 6px;
+      font-weight: 400;
+    }
+    .hospital_detail h3.closed::after{
+      content: "휴무";
+      font-size: 0.75rem;
+      color: #676767;
+      padding-left: 6px;
+      font-weight: 400;
+    }
+    .star_score{
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .star_score img{
+      width: 13px;
+      margin-right: 3px;
+    }
+    .star_score span b{
+      color: #757575;
+      padding-left: 3px;
+    }
+    .hospital_detail > p{color: #8B8B8B;margin-bottom: 6px;}
+    .hospital_detail > span{color: #FF9839;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar" style="background-color: #fff;">
+      <a href="../index.html"><img src="../img/btn_back_grey.png" alt=""></a>
+      <div class="text_bar">
+        <input type="text" placeholder="병원을 검색하세요.">
+      </div>
+      </header>
+    <!-- //상단탭 -->
+    <div class="container">
+      <!-- 검색도움 -->
+      <div class="resent_research">
+        <h2>최근검색어</h2>
+        <p>최근 검색기록이 없습니다.</p>
+      </div>
+      <div class="hospital_keyword">
+        <h2>병원시설 키워드</h2>
+        <ul class="keyword_list">
+          <li>야간진료</li>
+          <li>예약</li>
+          <li>응급진료</li>
+          <li>주차가능</li>
+          <li>24시간</li>
+          <li>전문의</li>
+        </ul>
+      </div>
+      <div class="hospital_keyword">
+        <h2>진료항목 키워드</h2>
+        <ul class="keyword_list">
+          <li>피부</li>
+          <li>심장</li>
+          <li>슬개골</li>
+          <li>스케일링</li>
+          <li>치아</li>
+          <li>골절</li>
+          <li>눈</li>
+          <li>감기</li>
+        </ul>
+      </div>
+      <!-- //검색도움 -->
+
+      <!-- 검색결과(이끌림병원만) -->
+      <div class="result" style="display: none;">
+        <a href="#" class="result_list">
+          <div class="hospital_img"></div>
+          <div class="hospital_detail">
+            <h3 class="open">이끌림동물병원</h3>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.3<b>(후기 10개)</b></span>
+            </div>
+            <p>1.35km 근방</p>
+            <span>#일요일진료</span>
+            <span>#주차가능</span>
+          </div>
+          <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+        </a>
+      </div>
+      <!-- //검색결과(이끌림병원만) -->
+    </div>
+  </div>
+</body>
+</html>

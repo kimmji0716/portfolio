@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>진료비조회</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_cost.css">
+  <script src="../js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="medicalcost.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>진료비 조회</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container wrap_padding">
+      <section class="question_one">
+        <h3>진료항목</h3>
+        <ul class="answer_tab">
+          <li>질병</li>
+          <li>예방</li>
+          <li>검사</li>
+          <li>수술</li>
+          <li>치료</li>
+          <li>진료 및 입원</li>
+        </ul>
+      </section>
+      <section class="question_two">
+        <h3>세부항목</h3>
+        <ul class="answer_tab">
+          <li>피부염</li>
+          <li>외이염</li>
+          <li>방광염</li>
+          <li>치은염/치주염</li>
+          <li>기관지염</li>
+          <li>세균성/식이성 설사</li>
+        </ul>
+      </section>
+      <a href="#" class="btn_link loca_bottom">예상 진료비 확인</a>
+    </div>
+
+    <div class="shadow_bg"></div>
+    <!-- 플로팅레이어 -->
+    <div class="float_layer">
+      <img src="../img/btn_close_dark.png" alt="">
+      <div class="flt_layer_detail">
+        <h3>예상 진료비</h3>
+        <img src="../img/icon_money.png" alt="">
+        <p class="medi_cost">약 <b>4만원 ~ 5만원</b></p>
+        <p class="medi_notice">
+          ※ 표시되는 가격은 예상 진료비로,<br>
+          방문하시는 병원에 따라 실제 진료비가 변경될 수도 있습니다.
+        </p>
+        <a href="../tab_hospital/hospital.html" class="btn_goto_hosp">가까운 동물병원 찾기</a>
+      </div>
+    </div>
+    <!-- //플로팅레이어 -->
+  </div>
+  <script>
+    $(function(){
+      $('.answer_tab li').click(function(){
+        $('.answer_tab li').removeClass('on');
+        $(this).addClass('on');
+      });
+      $('.question_one .answer_tab li').click(function(){
+        $('.question_two').css('opacity','100%');
+      });
+      $('.question_two .answer_tab li').click(function(){
+        $('.loca_bottom').addClass('on');
+      });
+      $('.loca_bottom').click(function(){
+        $('.shadow_bg').fadeIn(500);
+        $('.float_layer').css('bottom',0);
+      });
+      $('.float_layer > img').click(function(){
+        $('.shadow_bg').fadeOut(500);
+        $('.float_layer').css('bottom','-421px');
+      });
+      $('.shadow_bg').click(function(){
+        $('.shadow_bg').fadeOut(500);
+        $('.float_layer').css('bottom','-421px');
+      });
+    });
+  </script>
+</body>
+</html>

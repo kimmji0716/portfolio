@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>병원후기|상세</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .location{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      padding: 0 20px;
+      background-color: #F2F2F2;
+    }
+    .location > img{margin-right: 4px;}
+    .location > p{flex-grow: 1;}
+    .location a{color: #595959;padding-left: 4px;}
+    .select{
+      color: #959595;
+      padding: 4px 8px;
+      border: 1px solid #9d9d9d;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .select img{margin-left: 6px;}
+
+    .review_wrap{padding: 16px 20px;}
+    .hospital_name{
+      padding: 10px 0;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+    .hospital_name h3{font-weight: 500;}
+    .hospital_name a{
+      font-size: 0.75rem;
+      color: #959595;
+    }
+    .review_box{
+      padding: 14px;
+      border: 1px solid #F2F2F2;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .review_box:last-child{margin-bottom: 0;}
+    .review_tit{
+      display: flex;
+      align-items: center;
+    }
+    .review_tit h3{
+      font-weight: 500;
+      color: #232323;
+      padding-right: 6px;
+    }
+    .review_tit > span{
+      font-size: 0.625rem;
+      color: #595959;
+      flex-grow: 1;
+    }
+    .star_score{
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #232323;
+    }
+    .star_score img{margin-right: 4px;}
+    .hashtag{
+      padding: 6px 10px 6px 0;
+      color: #FF9839;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .price{
+      font-size: 0.75rem;
+      color: #595959;
+    }
+    .review_con{
+      padding: 8px 0 12px;
+      color: #232323;
+      font-size: 0.875rem;
+    }
+    .keypoint{
+      display: flex;
+      font-size: 0.625rem;
+      align-items: end;
+    }
+    .keypoint_box{
+      display: flex;
+      flex-grow: 1;
+    }
+    .keypoint_box p{
+      padding:4px 10px;
+      border-radius: 50px;
+      border: 1px solid #D9D9D9;
+      color: #232323;
+      margin-right: 4px;
+    }
+    .keypoint span{
+      color: #595959;
+    }
+    .btn_showmore{
+      margin: 0 auto;
+      width: 320px;
+      height: 52px;
+      font-weight: 500;
+      background-color: #F2F2F2;
+      color: #595959;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="community.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>병원후기</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <!-- 위치변경 -->
+      <div class="location">
+        <img src="../img/icon_loca.png" alt="">
+        <p>대한민국 대구광역시<a href="#">변경</a></p>
+        <div class="select">
+          가까운 순
+          <img src="../img/btn_downarrow.png" alt="">
+        </div>
+      </div>
+      <!-- //위치변경 -->
+
+      <!-- 리뷰 -->
+      <section class="review_wrap">
+        <div class="hospital_name">
+          <h3>이끌림동물병원</h3>
+          <a href="../tab_hospital/hospital_review.html">더보기</a>
+        </div>
+        <article class="review_box">
+          <div class="review_tit">
+            <h3>이끌림동물병원</h3>
+            <span>영수증인증</span>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.5</span>
+            </div>
+          </div>
+          <span class="hashtag">#알러지</span><span class="hashtag">#피부</span>
+          <p class="price">215,000원</p>
+          <p class="review_con">
+            친절하게 해주셨고 과잉진료도 없었어요. 매번 방문해요.
+          </p>
+          <div class="keypoint">
+            <div class="keypoint_box">
+              <p>친절해요</p>
+              <p>과잉진료 없어요</p>
+            </div>
+            <span>2023.07.24</span>
+          </div>
+        </article>
+        <div class="hospital_name">
+          <h3>율하동물병원</h3>
+          <a href="#">더보기</a>
+        </div>
+        <article class="review_box">
+          <div class="review_tit">
+            <h3>율하동물병원</h3>
+            <span>영수증인증</span>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.5</span>
+            </div>
+          </div>
+          <span class="hashtag">#알러지</span><span class="hashtag">#피부</span>
+          <p class="price">215,000원</p>
+          <p class="review_con">
+            근처에 있는 다른 동물병원도 데려갔었는데 여기는 수의사 분이 되게 친절하신 점이 좋았습니다.
+          </p>
+          <div class="keypoint">
+            <div class="keypoint_box">
+              <p>친절해요</p>
+              <p>과잉진료 없어요</p>
+            </div>
+            <span>2023.07.24</span>
+          </div>
+        </article>
+        <div class="hospital_name">
+          <h3>쿨펫동물병원</h3>
+          <a href="#">더보기</a>
+        </div>
+        <article class="review_box">
+          <div class="review_tit">
+            <h3>쿨펫동물병원</h3>
+            <span>영수증인증</span>
+            <div class="star_score">
+              <img src="../img/icon_star.png" alt="">
+              <span>4.5</span>
+            </div>
+          </div>
+          <span class="hashtag">#알러지</span><span class="hashtag">#피부</span>
+          <p class="price">215,000원</p>
+          <p class="review_con">
+            여긴 의사선생님들 너무 좋아요.. 과잉진료 없이 꼼꼼히 봐주시고 최고입니다.
+          </p>
+          <div class="keypoint">
+            <div class="keypoint_box">
+              <p>친절해요</p>
+              <p>과잉진료 없어요</p>
+            </div>
+            <span>2023.07.24</span>
+          </div>
+        </article>
+      <!-- //리뷰 -->
+      </section>
+      <div class="btn_showmore">리뷰 더보기</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동물병원</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub_hospital.css">
+</head>
+<body>
+  <div class="wrap" style="background-color: #F2F2F2;">
+    <!-- 상단탭 -->
+    <header class="top_tapbar" style="padding-left: 20px;">
+      <h2>동물병원</h2>
+      <a href="../extrapage/search.html"><img src="../img/btn_search.png" alt="검색"></a>
+      <a href="../extrapage/alert.html"><img src="../img/btn_alert.png" alt="알림"></a>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <section class="location">
+        <div class="curr_loca">
+          <img src="../img/icon_loca.png" alt="">
+          <h3>대한민국 대구광역시</h3>
+        </div>
+        <a href="#">지도로 보기</a>
+      </section>
+      <section class="filter">
+        <div class="filter_list">
+          <h3>병원시설</h3>
+          <ul class="filter_tab">
+            <li>24시간</li>
+            <li>주차가능</li>
+            <li>야간진료</li>
+          </ul>
+          <img src="../img/btn_plus_grey.png" alt="">
+        </div>
+        <div class="filter_list">
+          <h3>진료항목</h3>
+          <ul class="filter_tab">
+            <li>예방접종</li>
+            <li>피검사</li>
+            <li>피부</li>
+          </ul>
+          <img src="../img/btn_plus_grey.png" alt="">
+        </div>
+      </section>
+      <section class="hosp_list">
+        <div class="list_filter">
+          <div class="check_hospital">
+            <input type="checkbox" id="open_hospital">
+            <label for="open_hospital">진료중인 병원만 보기</label>
+          </div>
+          <select>
+            <option value="distance">가까운 순</option>
+            <option value="distance">별점 순</option>
+            <option value="distance">후기많은 순</option>
+          </select>
+        </div>
+        <div class="hospital_tab">
+          <a href="hospital_detail.html" class="hospital list01">
+            <div class="hospital_img"></div>
+            <div class="hospital_detail">
+              <h3 class="open">이끌림동물병원</h3>
+              <div class="star_score">
+                <img src="../img/icon_star.png" alt="">
+                <span>4.3<b>(후기 10개)</b></span>
+              </div>
+              <p>1.35km 근방</p>
+              <span>#일요일진료</span>
+              <span>#주차가능</span>
+            </div>
+            <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+          </a>
+          <a href="#" class="hospital list02">
+            <div class="hospital_img"></div>
+            <div class="hospital_detail">
+              <h3 class="closed">율하동물병원</h3>
+              <div class="star_score">
+                <img src="../img/icon_star.png" alt="">
+                <span>4.3<b>(후기 10개)</b></span>
+              </div>
+              <p>3.87km 근방</p>
+              <span>#일요일진료</span>
+              <span>#주차가능</span>
+            </div>
+            <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+          </a>
+          <a href="#" class="hospital list03">
+            <div class="hospital_img"></div>
+            <div class="hospital_detail">
+              <h3 class="open">쿨펫동물병원</h3>
+              <div class="star_score">
+                <img src="../img/icon_star.png" alt="">
+                <span>4.3<b>(후기 10개)</b></span>
+              </div>
+              <p>4.71km 근방</p>
+              <span>#일요일진료</span>
+              <span>#주차가능</span>
+            </div>
+            <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+          </a>
+          <a href="#" class="hospital list04">
+            <div class="hospital_img"></div>
+            <div class="hospital_detail">
+              <h3 class="open">킴스동물병원</h3>
+              <div class="star_score">
+                <img src="../img/icon_star.png" alt="">
+                <span>4.3<b>(후기 10개)</b></span>
+              </div>
+              <p>5.21km 근방</p>
+              <span>#일요일진료</span>
+              <span>#주차가능</span>
+            </div>
+            <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+          </a>
+          <a href="#" class="hospital list05">
+            <div class="hospital_img"></div>
+            <div class="hospital_detail">
+              <h3 class="open">앨리스동물병원</h3>
+              <div class="star_score">
+                <img src="../img/icon_star.png" alt="">
+                <span>4.3<b>(후기 10개)</b></span>
+              </div>
+              <p>5.21km 근방</p>
+              <span>#일요일진료</span>
+              <span>#주차가능</span>
+            </div>
+            <img src="../img/btn_heart.png" alt="" style="cursor: pointer;">
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 하단탭 -->
+    <footer class="navi_tap">
+      <ul>
+        <li><a href="../index.html"><img src="../img/tab_home.png" alt=""></a></li>
+        <li><a href="../tab_cost/medicalcost.html"><img src="../img/tab_cost.png" alt=""></a></li>
+        <li><a href="#none"><img src="../img/tab_hospital_on.png" alt=""></a></li>
+        <li><a href="../tab_community/community.html"><img src="../img/tab_community.png" alt=""></a></li>
+        <li><a href="../tab_mypage/mypage.html"><img src="../img/tab_mypage.png" alt=""></a></li>
+      </ul>
+    </footer>
+    <!-- //하단탭 -->
+  </div>
+</body>
+</html>

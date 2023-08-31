@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자유게시판|글쓰기</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+    .title{
+      margin: 38px 20px 10px;
+      padding: 5px;
+      border: 1px solid #D9D9D9;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .title p{
+      text-indent: 5px;
+      font-size: 0.875rem;
+      color: #232323;
+      cursor: text;
+    }
+    .btn_storage_num{
+      font-size: 0.75rem;
+      color: #fff;
+      background-color: #A6EAFF;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+    }
+    .contents_img{
+      padding: 5px 10px 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .contents_img span{
+      color: #959595;
+      padding-left: 5px;
+      font-size: 0.75rem;
+    }
+
+    .contents{
+      margin: 0 20px;
+      border-radius: 10px;
+      border: 1px solid #D9D9D9;
+    }
+    .contents_box{
+      height: 300px;
+      padding: 10px;
+      font-size: 0.875rem;
+      color: #232323;
+      border-bottom: 1px solid #D9D9D9;
+      cursor: text;
+    }
+
+    .btn_wrap{
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn_storage,.btn_upload{
+      width: 155px;
+      line-height: 52px;
+      font-size: 1.25rem;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .btn_storage{
+      border: 1px solid #46D3FF;
+      color: #46D3FF;
+    }
+    .btn_upload{
+      background-color: #46D3FF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 상단탭 -->
+    <header class="top_tapbar">
+      <a href="free_board.html"><img src="../img/btn_back.png" alt=""></a>
+      <h2>자유게시판</h2>
+    </header>
+    <!-- //상단탭 -->
+
+    <div class="container">
+      <div class="title">
+        <p>마루가 아픈거같아요...</p>
+        <div class="btn_storage_num">임시 저장된 글(0)</div>
+      </div>
+      
+      <div class="contents">
+        <div class="contents_box">
+          어제부터 밥도 안먹고 좋아하는 간식을 줘도 반응이 없네요ㅠㅠ 병원 가고있는데 큰일일까봐 걱정이에요 별 일 아니길 빌어주세요ㅠㅠㅠ
+        </div>
+        <div class="contents_img">
+          <img src="../img/icon_gallery.png" alt="">
+          <span>사진 및 파일 첨부</span>
+        </div>
+      </div>
+
+      <div class="btn_wrap">
+        <div class="btn_storage">임시저장</div>
+        <div class="btn_upload">업로드</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
