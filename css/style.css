@@ -60,8 +60,10 @@ section h2:not(.no):before {
     display: block;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    margin-right: 80px;
     text-transform: uppercase;
+}
+.header .gnb .depth1 li:not(:last-child) a {
+    margin-right: 80px;
 }
 .header .gnb .depth1 a:hover {
     color: #f9a9a9;
@@ -214,7 +216,6 @@ section h2:not(.no):before {
     background-color: #f9a9a9;
     margin-bottom: 10px;
     border-radius: 12px;
-
 }
 .work-list .list {
     display: flex;
